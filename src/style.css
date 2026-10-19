@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+.product-card {
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 12%);
+}
+.product-card img {
+  transition: transform 350ms ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-card img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@keyframes solest-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate {
+  animation: solest-fade-up 700ms ease-out both;
+}
+
+.hero-animate-delay-1 {
+  animation: solest-fade-up 700ms ease-out 150ms both;
+}
+
+.hero-animate-delay-2 {
+  animation: solest-fade-up 700ms ease-out 300ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .hero-animate-delay-1,
+  .hero-animate-delay-2 {
+    animation: none;
+  }
+}
+
+/* SOLEST scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
