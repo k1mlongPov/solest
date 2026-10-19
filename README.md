@@ -50,7 +50,7 @@ SOLEST is a responsive sneaker marketplace website built as a frontend student p
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone https://github.com/k1mlongPov/solest.git
    ```
 
 2. Open the project directory:
